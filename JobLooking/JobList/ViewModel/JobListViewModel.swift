@@ -9,8 +9,6 @@ import SwiftUI
 
 class JobsListViewModel: ObservableObject {
     @Published var jobVacansy = [Vacancy]()
-
-    
     
     func fetchDataPressed() async {
         do {

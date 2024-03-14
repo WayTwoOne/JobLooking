@@ -19,6 +19,9 @@
 		E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72705792BA30B090059A7B7 /* ContentView.swift */; };
 		E727057C2BA30B0B0059A7B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057B2BA30B0B0059A7B7 /* Assets.xcassets */; };
 		E727057F2BA30B0B0059A7B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */; };
+		E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */; };
+		E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55B2BA3948800ACA82E /* ButtonsView.swift */; };
+		E766A55E2BA3949E00ACA82E /* TextViewAndIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55D2BA3949E00ACA82E /* TextViewAndIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		E72705792BA30B090059A7B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E727057B2BA30B0B0059A7B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewModel.swift; sourceTree = "<group>"; };
+		E766A55B2BA3948800ACA82E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		E766A55D2BA3949E00ACA82E /* TextViewAndIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAndIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,6 @@
 			children = (
 				E7254CA62BA34C9B00D408B7 /* LogIn */,
 				E7254CA72BA34D3600D408B7 /* JobSearch */,
-				E7254CA82BA34D4700D408B7 /* SearchForEmployees */,
 			);
 			path = PersonalAccount;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		E7254CA92BA34D6500D408B7 /* JobSearchViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */,
 			);
 			path = JobSearchViewModels;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */,
+				E766A55A2BA3947000ACA82E /* ButtonsView */,
+				E766A5592BA3946400ACA82E /* TextViewAndIcon */,
 			);
 			path = JobSearchViews;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				E72705772BA30B090059A7B7 /* JobLookingApp.swift */,
 				E72705792BA30B090059A7B7 /* ContentView.swift */,
 				E7254C9F2BA3492B00D408B7 /* PersonalAccount */,
+				E7254CA82BA34D4700D408B7 /* SearchForEmployees */,
 				E7254C8A2BA32C8900D408B7 /* JobList */,
 				E7254C8F2BA32CC600D408B7 /* Api */,
 				E7254C962BA32D5A00D408B7 /* Services */,
@@ -217,6 +226,22 @@
 				E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E766A5592BA3946400ACA82E /* TextViewAndIcon */ = {
+			isa = PBXGroup;
+			children = (
+				E766A55D2BA3949E00ACA82E /* TextViewAndIcon.swift */,
+			);
+			path = TextViewAndIcon;
+			sourceTree = "<group>";
+		};
+		E766A55A2BA3947000ACA82E /* ButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				E766A55B2BA3948800ACA82E /* ButtonsView.swift */,
+			);
+			path = ButtonsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,13 +314,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E766A55E2BA3949E00ACA82E /* TextViewAndIcon.swift in Sources */,
 				E7254C952BA32D3500D408B7 /* JobListViewModel.swift in Sources */,
 				E7254C9A2BA32DEF00D408B7 /* JobListView.swift in Sources */,
 				E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */,
 				E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */,
 				E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */,
 				E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */,
+				E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */,
 				E7254C982BA32D6D00D408B7 /* NetworkService.swift in Sources */,
+				E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */,
 				E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */,
 				E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */,
 				E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */,

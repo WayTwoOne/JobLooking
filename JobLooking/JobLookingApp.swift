@@ -11,7 +11,7 @@ import SwiftUI
 struct JobLookingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            JobSearchView(textinput: .constant("Text"))
         }
     }
 }
