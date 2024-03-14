@@ -14,6 +14,7 @@
 		E7254C9A2BA32DEF00D408B7 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C992BA32DEF00D408B7 /* JobListView.swift */; };
 		E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */; };
 		E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */; };
+		E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */; };
 		E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72705772BA30B090059A7B7 /* JobLookingApp.swift */; };
 		E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72705792BA30B090059A7B7 /* ContentView.swift */; };
 		E727057C2BA30B0B0059A7B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057B2BA30B0B0059A7B7 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		E7254C992BA32DEF00D408B7 /* JobListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListView.swift; sourceTree = "<group>"; };
 		E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountViewModel.swift; sourceTree = "<group>"; };
 		E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
+		E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchView.swift; sourceTree = "<group>"; };
 		E72705742BA30B090059A7B7 /* JobLooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobLooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72705772BA30B090059A7B7 /* JobLookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLookingApp.swift; sourceTree = "<group>"; };
 		E72705792BA30B090059A7B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		E7254CAA2BA34D8000D408B7 /* JobSearchViews */ = {
 			isa = PBXGroup;
 			children = (
+				E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */,
 			);
 			path = JobSearchViews;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */,
 				E7254C982BA32D6D00D408B7 /* NetworkService.swift in Sources */,
 				E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */,
+				E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */,
 				E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
