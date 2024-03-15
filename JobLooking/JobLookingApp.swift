@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct JobLookingApp: App {
+    @State var text = ""
+//    @State var width = CGFloat(340)
+//    @State var height = CGFloat(40)
     var body: some Scene {
         WindowGroup {
-            JobSearchView(textinput: .constant("Text"))
+            JobSearchView()
         }
     }
 }
