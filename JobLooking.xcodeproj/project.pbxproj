@@ -19,11 +19,14 @@
 		E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72705792BA30B090059A7B7 /* ContentView.swift */; };
 		E727057C2BA30B0B0059A7B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057B2BA30B0B0059A7B7 /* Assets.xcassets */; };
 		E727057F2BA30B0B0059A7B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */; };
+		E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73526BB2BA628DC009D40C1 /* Extension.swift */; };
 		E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */; };
 		E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */; };
 		E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */; };
 		E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55B2BA3948800ACA82E /* ButtonsView.swift */; };
 		E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */; };
+		E782FDE62BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FDE52BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift */; };
+		E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +43,14 @@
 		E72705792BA30B090059A7B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E727057B2BA30B0B0059A7B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E73526BB2BA628DC009D40C1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForEmployeesView.swift; sourceTree = "<group>"; };
 		E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewModel.swift; sourceTree = "<group>"; };
 		E766A55B2BA3948800ACA82E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAndIconView.swift; sourceTree = "<group>"; };
+		E782FDE52BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeViewModel.swift; sourceTree = "<group>"; };
+		E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 			children = (
 				E7254CA62BA34C9B00D408B7 /* LogIn */,
 				E7254CA72BA34D3600D408B7 /* JobSearch */,
+				E7254CA82BA34D4700D408B7 /* SearchForEmployees */,
 			);
 			path = PersonalAccount;
 			sourceTree = "<group>";
@@ -156,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				E7254CAD2BA34D9E00D408B7 /* SearchForEmployeesViews */,
-				E7254CAC2BA34D9300D408B7 /* SearchForEmployeesViewModels */,
 			);
 			path = SearchForEmployees;
 			sourceTree = "<group>";
@@ -174,16 +180,8 @@
 			children = (
 				E766A5592BA3946400ACA82E /* TextViewAndIcon */,
 				E766A55A2BA3947000ACA82E /* ButtonsView */,
-				E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */,
 			);
 			path = JobSearchViews;
-			sourceTree = "<group>";
-		};
-		E7254CAC2BA34D9300D408B7 /* SearchForEmployeesViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchForEmployeesViewModels;
 			sourceTree = "<group>";
 		};
 		E7254CAD2BA34D9E00D408B7 /* SearchForEmployeesViews */ = {
@@ -216,10 +214,11 @@
 				E72705772BA30B090059A7B7 /* JobLookingApp.swift */,
 				E72705792BA30B090059A7B7 /* ContentView.swift */,
 				E7254C9F2BA3492B00D408B7 /* PersonalAccount */,
-				E7254CA82BA34D4700D408B7 /* SearchForEmployees */,
+				E782FDE22BA59FBD002189AB /* EnteringTheReceivedCode */,
 				E7254C8A2BA32C8900D408B7 /* JobList */,
 				E7254C8F2BA32CC600D408B7 /* Api */,
 				E7254C962BA32D5A00D408B7 /* Services */,
+				E73526BD2BA6297D009D40C1 /* ExtensionsAndHelpers */,
 				E727057B2BA30B0B0059A7B7 /* Assets.xcassets */,
 				E727057D2BA30B0B0059A7B7 /* Preview Content */,
 			);
@@ -232,6 +231,15 @@
 				E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E73526BD2BA6297D009D40C1 /* ExtensionsAndHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E73526BB2BA628DC009D40C1 /* Extension.swift */,
+				E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */,
+			);
+			path = ExtensionsAndHelpers;
 			sourceTree = "<group>";
 		};
 		E766A5592BA3946400ACA82E /* TextViewAndIcon */ = {
@@ -248,6 +256,39 @@
 				E766A55B2BA3948800ACA82E /* ButtonsView.swift */,
 			);
 			path = ButtonsView;
+			sourceTree = "<group>";
+		};
+		E782FDE22BA59FBD002189AB /* EnteringTheReceivedCode */ = {
+			isa = PBXGroup;
+			children = (
+				E782FDE42BA59FE2002189AB /* EnteringTheReceivedCodeViewModel */,
+				E782FDE32BA59FCF002189AB /* EnteringTheReceivedCodeView */,
+			);
+			path = EnteringTheReceivedCode;
+			sourceTree = "<group>";
+		};
+		E782FDE32BA59FCF002189AB /* EnteringTheReceivedCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				E782FDE92BA5B36C002189AB /* PinCodeTextFields */,
+			);
+			path = EnteringTheReceivedCodeView;
+			sourceTree = "<group>";
+		};
+		E782FDE42BA59FE2002189AB /* EnteringTheReceivedCodeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E782FDE52BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift */,
+			);
+			path = EnteringTheReceivedCodeViewModel;
+			sourceTree = "<group>";
+		};
+		E782FDE92BA5B36C002189AB /* PinCodeTextFields */ = {
+			isa = PBXGroup;
+			children = (
+				E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */,
+			);
+			path = PinCodeTextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +364,7 @@
 				E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */,
 				E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */,
 				E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */,
+				E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */,
 				E7254C952BA32D3500D408B7 /* JobListViewModel.swift in Sources */,
 				E7254C9A2BA32DEF00D408B7 /* JobListView.swift in Sources */,
 				E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */,
@@ -335,6 +377,8 @@
 				E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */,
 				E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */,
 				E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */,
+				E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */,
+				E782FDE62BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

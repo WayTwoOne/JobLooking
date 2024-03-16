@@ -59,7 +59,7 @@ struct TextViewAndIcon: View {
                     
                         .onSubmit {
                             viewModel.checkEmailAdress(email: textInput)
-                            ? viewModel.emailCorrect()
+                            ? viewModel.emailCorrect(email: textInput)
                             : viewModel.emailIncorrect()
                             
                             viewModel.emailFieldDidEndEditting()
