@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct JobSearchView: View {
-    
-    @ObservedObject private var viewModel = JobSearchViewModel()
-    var helper = Helper()
+    @ObservedObject var viewModel: JobSearchViewModel
+    let helper: Helper
     
     @State private var textinput = ""
     
@@ -34,18 +33,18 @@ struct JobSearchView: View {
                         .frame(alignment: .leading)
                         .padding(.leading, mainWidth - rectangleWidth)
                         .padding(.bottom, 10)
-                    TextViewAndIcon(textInput: $textinput, width: $rectangleWidth, height: $rectanglHeight)
-                    ButtonsView(width: $rectangleWidth, height: $rectanglHeight)
+                    TextViewAndIcon(viewModel: viewModel, textInput: $textinput, width: $rectangleWidth, height: $rectanglHeight)
+                    ButtonsView(viewModel: viewModel, textInput: $textinput, width: $rectangleWidth, height: $rectanglHeight)
                         .padding([.leading, .trailing], mainWidth - rectangleWidth)
                 }
             }
-            SearchForEmployeesView()
+            
         }
     }
 }
 
 struct JobSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        JobSearchView()
+        JobSearchView(viewModel: JobSearchViewModel(), helper: Helper())
     }
 }

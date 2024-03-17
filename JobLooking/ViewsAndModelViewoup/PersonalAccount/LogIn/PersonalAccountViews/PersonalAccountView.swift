@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct PersonalAccountView: View {
+    @ObservedObject var viewModel: JobSearchViewModel
+    let helper: Helper
     var body: some View {
         ZStack {
-            NavigationView {
+            NavigationView() {
                 ScrollView {
+                    Spacer(minLength: 150)
+                    JobSearchView(viewModel: viewModel, helper: helper)
+                    SearchForEmployeesView()
                 }
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarLeading, content: {
@@ -32,6 +37,6 @@ struct PersonalAccountView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalAccountView()
+        PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
     }
 }

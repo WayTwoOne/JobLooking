@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct PinCodeTextFieldView: View {
-    private var helper = Helper()
-    
-    @ObservedObject private var viewModel = EnteringTheReceivedCodeViewModel(numberOfFields: 4)
+    let helper: Helper
+    @ObservedObject var viewModel: EnteringTheReceivedCodeViewModel
     
     @FocusState private var hasFocus: Int?
     
@@ -21,7 +20,7 @@ struct PinCodeTextFieldView: View {
                 TextField("*", text: $viewModel.pinCode[index])
                     .keyboardType(.numberPad)
                     .frame(width: 48, height: 48)
-                    .background(helper.darkGray.opacity(0.1))
+                    .background(helper.gray.opacity(0.8))
                     .cornerRadius(5)
                     .multilineTextAlignment(.center)
                     .keyboardType(.numberPad)
@@ -42,21 +41,26 @@ struct PinCodeTextFieldView: View {
         
                             if index == viewModel.numberOfFields - 1 {
                                 hasFocus = nil
+                                viewModel.counter = 4
                             } else {
                                 hasFocus = (hasFocus ?? 0) + 1
+                                viewModel.counter += 1
                             }
                             
                         } else {
                             hasFocus = (hasFocus ?? 0) - 1
+                            viewModel.counter -= 1
                         }
+                        
+                        viewModel.ableButton()
                     }
                 }
             }
         }
     }
     
-struct EnteringTheReceivedCodeView_Previews: PreviewProvider {
+struct PinCodeTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        PinCodeTextFieldView()
+        PinCodeTextFieldView(helper: Helper(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4))
     }
 }

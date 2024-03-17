@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var viewModel = JobsListViewModel()
+    @ObservedObject var coordinator: Coordinator
     
     var body: some View {
-        Text("Hello world")
+        NavigationStack(path: $coordinator.path) {
+            coordinator.getPage(MyPage.home)
+                .navigationDestination(for: MyPage.self) { page in
+                    coordinator.getPage(page)
+                }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @State static var coordinator = Coordinator()
     static var previews: some View {
-        ContentView()
+        ContentView(coordinator: coordinator)
+            .environmentObject(coordinator)
     }
 }

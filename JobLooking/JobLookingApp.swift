@@ -14,7 +14,7 @@ struct JobLookingApp: App {
 //    @State var height = CGFloat(40)
     var body: some Scene {
         WindowGroup {
-            PinCodeTextFieldView()
+            ContentView(coordinator: Coordinator())
         }
     }
 }

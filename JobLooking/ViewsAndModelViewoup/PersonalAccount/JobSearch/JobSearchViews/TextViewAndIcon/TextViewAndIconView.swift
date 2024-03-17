@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TextViewAndIcon: View {
-    @ObservedObject private var viewModel = JobSearchViewModel()
-    var helper = Helper()
+    @ObservedObject var viewModel: JobSearchViewModel
+    @FocusState private var hasFocus: Bool
+    private let helper = Helper()
     
     let mainWidth = UIScreen.main.bounds.width
     let mainHeight = UIScreen.main.bounds.height
@@ -46,6 +47,7 @@ struct TextViewAndIcon: View {
                         .background(helper.gray)
                         .frame(height: 30)
                         .textContentType(.oneTimeCode)
+                        .focused($hasFocus)
                         .keyboardType(.default)
                         .padding()
                         
@@ -55,13 +57,14 @@ struct TextViewAndIcon: View {
                     
                         .onChange(of: textInput, perform: { newValue in
                             viewModel.checkTheEmailFieldNumberOfCharacters(string: newValue)
+                        
                         })
                     
                         .onSubmit {
                             viewModel.checkEmailAdress(email: textInput)
-                            ? viewModel.emailCorrect(email: textInput)
+                            ? viewModel.emailCorrect()
                             : viewModel.emailIncorrect()
-                            
+
                             viewModel.emailFieldDidEndEditting()
                         }
                         
@@ -94,6 +97,6 @@ struct TextViewAndIcon: View {
 
 struct TextViewAndIcon_Previews: PreviewProvider {
     static var previews: some View {
-        TextViewAndIcon(textInput: .constant("Электронная почта или телефон"), width: .constant(340), height: .constant(40))
+        TextViewAndIcon(viewModel: JobSearchViewModel(), textInput: .constant("Электронная почта или телефон"), width: .constant(340), height: .constant(40))
     }
 }

@@ -12,6 +12,9 @@ class EnteringTheReceivedCodeViewModel: ObservableObject {
     @Published var pinCode: [String] = [""]
     @Published var oldValue = ""
     @Published var hasFocus: Int?
+    @Published var isButtonDisable = true
+    
+    var counter = 0
     let numberOfFields: Int
     
     init(numberOfFields: Int) {
@@ -78,5 +81,15 @@ class EnteringTheReceivedCodeViewModel: ObservableObject {
         if pinCode[index].count > 1 {
             pinCode[index] = String(pinCode[index].suffix(1))
         }
+    }
+    
+    func ableButton() {
+        print(counter)
+        if counter == 4 {
+            
+            isButtonDisable = false
+            print(isButtonDisable)
+        }
+        
     }
 }

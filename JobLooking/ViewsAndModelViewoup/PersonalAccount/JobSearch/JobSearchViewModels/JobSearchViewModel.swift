@@ -43,10 +43,8 @@ public class JobSearchViewModel: ObservableObject {
         isEdittingChenged = false
     }
     
-    func emailCorrect(email: String) {
+    func emailCorrect() {
         isEmailCorrect = true
-        userEmail = email
-        print(userEmail)
     }
     
     func emailIncorrect() {
@@ -56,11 +54,15 @@ public class JobSearchViewModel: ObservableObject {
 //MARK: Buttons func
     
     func checkTheEmailFieldNumberOfCharacters(string: String) {
-        if string.count == 0 {
-            ableOrDisableButton = true
-        } else {
+        if !string.isEmpty {
             ableOrDisableButton = false
+        } else {
+            ableOrDisableButton = true
         }
+    }
+    
+    func goToEnteringTheReceivedCodeView(with coordinator: Coordinator) {
+        coordinator.goToEnteringTheReceivedCodeView()
     }
 }
 
