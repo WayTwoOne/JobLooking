@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TextViewAndIcon: View {
-    @ObservedObject var viewModel: JobSearchViewModel
-    @FocusState private var hasFocus: Bool
+    @StateObject var viewModel: JobSearchViewModel
     private let helper = Helper()
     
     let mainWidth = UIScreen.main.bounds.width

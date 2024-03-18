@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EnteringTheReceivedCodeView: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @ObservedObject var viewModel:  EnteringTheReceivedCodeViewModel
+    @EnvironmentObject var jobViewModel: JobSearchViewModel
+    @StateObject var viewModel:  EnteringTheReceivedCodeViewModel
     let helper: Helper
     
     @State private var width = UIScreen.main.bounds.width * 0.9
@@ -22,9 +23,10 @@ struct EnteringTheReceivedCodeView: View {
                 .frame(width: UIScreen.main.bounds.width)
             VStack(spacing: 15) {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Отправили код на \(viewModel.jobSearchViewModel.userEmail)")
-                        .font(.system(size: 20))
-                        .foregroundColor(.white)
+                    Text("Отправили код на \(jobViewModel.userEmail)")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                            .lineLimit(1)
                     Text("Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет")
                         .font(.system(size: 16))
                         .foregroundColor(.white)
@@ -54,13 +56,14 @@ struct EnteringTheReceivedCodeView: View {
             .frame(width: width)
         }
         .frame(width: width)
-        
     }
     
 }
 
 struct EnteringTheReceivedCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()), helper: Helper())
+        let jobViewModel = JobSearchViewModel()
+        EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4), helper: Helper())
+            .environmentObject(jobViewModel)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct JobSearchView: View {
-    @ObservedObject var viewModel: JobSearchViewModel
+    @EnvironmentObject var viewModel: JobSearchViewModel
     let helper: Helper
     
     @State private var textinput = ""
@@ -39,12 +39,17 @@ struct JobSearchView: View {
                 }
             }
             
+            .onChange(of: textinput) { newValue in
+                viewModel.takeUserEmail(email: newValue)
+                
+            }
+            
         }
     }
 }
 
 struct JobSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        JobSearchView(viewModel: JobSearchViewModel(), helper: Helper())
+        JobSearchView(helper: Helper())
     }
 }

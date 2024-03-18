@@ -37,15 +37,15 @@ final class Coordinator: ObservableObject {
     func getPage(_ page: MyPage) -> some View {
         switch page {
         case .home:
-            PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
+            PersonalAccountView(helper: Helper())
         case .receivedCode:
-            EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()), helper: Helper())
+            EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4), helper: Helper())
         case .joblis:
             JobListView()
         case .currentVacansy:
-            PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
+            PersonalAccountView(helper: Helper())
         case .selectedVacancies:
-            PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
+            PersonalAccountView(helper: Helper())
         }
     }
     
@@ -53,7 +53,7 @@ final class Coordinator: ObservableObject {
     func getSheet(_ sheet: MySheet) -> some View {
         switch sheet {
         case .popup:
-            JobSearchView(viewModel: JobSearchViewModel(), helper: Helper())
+            JobSearchView(helper: Helper())
         }
     }
 }

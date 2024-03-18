@@ -32,20 +32,16 @@ struct PinCodeTextFieldView: View {
                     .onChange(of: viewModel.pinCode[index]) { newValue in
                         
                         viewModel.onlyNumbers(index: index, newValue: newValue)
-
+                        
                         viewModel.onlyOneDigitInTheField(index: index)
                         
                         viewModel.stepLeftStepRightAcrossTheFields(newValue: newValue, index: index)
                         
                         viewModel.ableButton()
                     }
-                }
             }
         }
     }
-    
-struct PinCodeTextFieldView_Previews: PreviewProvider {
-    static var previews: some View {
-        PinCodeTextFieldView(helper: Helper(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()))
-    }
 }
+    
+

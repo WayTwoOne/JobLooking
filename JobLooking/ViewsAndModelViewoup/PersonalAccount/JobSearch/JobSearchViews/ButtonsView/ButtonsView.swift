@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonsView: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @ObservedObject var viewModel: JobSearchViewModel
+    @StateObject var viewModel: JobSearchViewModel
     private let helper = Helper()
 
     @Binding var textInput: String

@@ -12,15 +12,13 @@ class EnteringTheReceivedCodeViewModel: ObservableObject {
     @Published var pinCode: [String] = [""]
     @Published var hasFocus: Int?
     @Published var isButtonDisable = true
-    
-    var jobSearchViewModel: JobSearchViewModel
+    @Published var email = ""
     
     let numberOfFields: Int
     
-    init(numberOfFields: Int, jobjobSearchViewModel: JobSearchViewModel) {
+    init(numberOfFields: Int) {
         self.numberOfFields = numberOfFields
         self.pinCode = Array(repeating: "", count: numberOfFields)
-        self.jobSearchViewModel = jobjobSearchViewModel
     }
     
     func onlyNumbers(index: Int, newValue: String) {

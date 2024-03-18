@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonalAccountView: View {
-    @ObservedObject var viewModel: JobSearchViewModel
+    @EnvironmentObject var viewModel: JobSearchViewModel
     let helper: Helper
     
     var body: some View {
@@ -16,7 +16,7 @@ struct PersonalAccountView: View {
             NavigationView() {
                 ScrollView {
                     Spacer(minLength: 150)
-                    JobSearchView(viewModel: viewModel, helper: helper)
+                    JobSearchView(helper: Helper())
                     SearchForEmployeesView()
                 }
                 .toolbar(content: {
@@ -38,6 +38,6 @@ struct PersonalAccountView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
+        PersonalAccountView(helper: Helper())
     }
 }
