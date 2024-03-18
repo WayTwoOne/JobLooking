@@ -27,30 +27,15 @@ struct PinCodeTextFieldView: View {
                     .focused($hasFocus, equals: index)
                     .tag(index)
                 
+                    .sync($viewModel.hasFocus, with: _hasFocus)
+                
                     .onChange(of: viewModel.pinCode[index]) { newValue in
+                        
                         viewModel.onlyNumbers(index: index, newValue: newValue)
-                        if viewModel.pinCode[index].count > 1 {
-                            viewModel.pinCode[index] = String(viewModel.pinCode[index].suffix(1))
-                        }
+
+                        viewModel.onlyOneDigitInTheField(index: index)
                         
-                        if Int(viewModel.pinCode[index]) == nil {
-                            hasFocus = nil
-                        }
-                        
-                        if !newValue.isEmpty {
-        
-                            if index == viewModel.numberOfFields - 1 {
-                                hasFocus = nil
-                                viewModel.counter = 4
-                            } else {
-                                hasFocus = (hasFocus ?? 0) + 1
-                                viewModel.counter += 1
-                            }
-                            
-                        } else {
-                            hasFocus = (hasFocus ?? 0) - 1
-                            viewModel.counter -= 1
-                        }
+                        viewModel.stepLeftStepRightAcrossTheFields(newValue: newValue, index: index)
                         
                         viewModel.ableButton()
                     }
@@ -61,6 +46,6 @@ struct PinCodeTextFieldView: View {
     
 struct PinCodeTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        PinCodeTextFieldView(helper: Helper(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4))
+        PinCodeTextFieldView(helper: Helper(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()))
     }
 }

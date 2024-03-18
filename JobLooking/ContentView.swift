@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var coordinator: Coordinator
+    @StateObject private var coordinator = Coordinator()
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -17,13 +17,12 @@ struct ContentView: View {
                     coordinator.getPage(page)
                 }
         }
+        .environmentObject(coordinator)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    @State static var coordinator = Coordinator()
     static var previews: some View {
-        ContentView(coordinator: coordinator)
-            .environmentObject(coordinator)
+        ContentView()
     }
 }

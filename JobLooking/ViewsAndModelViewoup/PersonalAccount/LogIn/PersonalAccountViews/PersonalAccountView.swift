@@ -10,6 +10,7 @@ import SwiftUI
 struct PersonalAccountView: View {
     @ObservedObject var viewModel: JobSearchViewModel
     let helper: Helper
+    
     var body: some View {
         ZStack {
             NavigationView() {

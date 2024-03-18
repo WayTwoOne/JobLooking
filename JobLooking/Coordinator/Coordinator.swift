@@ -39,7 +39,7 @@ final class Coordinator: ObservableObject {
         case .home:
             PersonalAccountView(viewModel: JobSearchViewModel(), helper: Helper())
         case .receivedCode:
-            EnteringTheReceivedCodeView(lastViewModel: JobSearchViewModel(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4), helper: Helper())
+            EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()), helper: Helper())
         case .joblis:
             JobListView()
         case .currentVacansy:

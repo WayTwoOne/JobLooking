@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EnteringTheReceivedCodeView: View {
-    @ObservedObject var lastViewModel: JobSearchViewModel
+    @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var viewModel:  EnteringTheReceivedCodeViewModel
     let helper: Helper
     
@@ -22,7 +22,7 @@ struct EnteringTheReceivedCodeView: View {
                 .frame(width: UIScreen.main.bounds.width)
             VStack(spacing: 15) {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Отправили код на \(lastViewModel.userEmail)")
+                    Text("Отправили код на \(viewModel.jobSearchViewModel.userEmail)")
                         .font(.system(size: 20))
                         .foregroundColor(.white)
                     Text("Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет")
@@ -35,7 +35,7 @@ struct EnteringTheReceivedCodeView: View {
                 .frame(width: width)
                 
                 SwiftUI.Button(action: {
-                    print("hello")
+                    viewModel.goToEnteringTheReceivedCodeView(with: coordinator)
                 }, label: {
                     Text("Продолжить")
                         .foregroundColor(.white)
@@ -61,6 +61,6 @@ struct EnteringTheReceivedCodeView: View {
 
 struct EnteringTheReceivedCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnteringTheReceivedCodeView(lastViewModel: JobSearchViewModel(), viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4), helper: Helper())
+        EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4, jobjobSearchViewModel: JobSearchViewModel()), helper: Helper())
     }
 }

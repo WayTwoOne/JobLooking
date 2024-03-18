@@ -47,8 +47,8 @@ struct TextViewAndIcon: View {
                         .background(helper.gray)
                         .frame(height: 30)
                         .textContentType(.oneTimeCode)
-                        .focused($hasFocus)
-                        .keyboardType(.default)
+//                        .focused($hasFocus)
+                        .keyboardType(.emailAddress)
                         .padding()
                         
                         .onTapGesture {
@@ -57,16 +57,7 @@ struct TextViewAndIcon: View {
                     
                         .onChange(of: textInput, perform: { newValue in
                             viewModel.checkTheEmailFieldNumberOfCharacters(string: newValue)
-                        
                         })
-                    
-                        .onSubmit {
-                            viewModel.checkEmailAdress(email: textInput)
-                            ? viewModel.emailCorrect()
-                            : viewModel.emailIncorrect()
-
-                            viewModel.emailFieldDidEndEditting()
-                        }
                         
                     
                     SwiftUI.Button(action: {

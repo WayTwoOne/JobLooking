@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ButtonsView: View {
+    @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var viewModel: JobSearchViewModel
     private let helper = Helper()
 
@@ -22,7 +23,9 @@ struct ButtonsView: View {
             SwiftUI.Button(action: {
                     viewModel.emailFieldDidEndEditting()
                 if viewModel.checkEmailAdress(email: textInput) {
+                    viewModel.takeUserEmail(email: textInput)
                     viewModel.emailCorrect()
+                    viewModel.goToEnteringTheReceivedCodeView(with: coordinator)
                 } else {
                     viewModel.emailIncorrect()
                 }
@@ -49,6 +52,7 @@ struct ButtonsView: View {
         }
         .onChange(of: textInput, perform: { newValue in
             viewModel.checkTheEmailFieldNumberOfCharacters(string: newValue)
+            viewModel.takeUserEmail(email: newValue)
         })
         .frame(width: width, height: height)
     }
