@@ -7,28 +7,26 @@
 
 import SwiftUI
 
-struct JobListView: View {
+struct VacansyView: View {
     @ObservedObject private var viewModel = JobsListViewModel()
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ForEach(viewModel.jobVacansy, id: \.title) { job in
-                    Text(job.title)
-                }
-                Text("\(viewModel.jobVacansy.count)")
+        ScrollView {
+            ForEach(viewModel.jobVacansy, id: \.title) { job in
+                Text(job.title)
+            }
+            Text("\(viewModel.jobVacansy.count)")
                 .foregroundColor(.red)
-            }
-            .navigationTitle("Job")
-            .task {
-                await viewModel.fetchDataPressed()
-            }
+        }
+        .navigationTitle("Job")
+        .task {
+            await viewModel.fetchDataPressed()
         }
     }
 }
 
 struct JobListView_Previews: PreviewProvider {
     static var previews: some View {
-        JobListView()
+        VacansyView()
     }
 }

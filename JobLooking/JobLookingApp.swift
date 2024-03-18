@@ -9,10 +9,19 @@ import SwiftUI
 
 @main
 struct JobLookingApp: App {
-    let jobSearchViewModel = JobSearchViewModel()
+//    let jobSearchViewModel = JobSearchViewModel()
+//    let vacansyViewModel = JobsListViewModel()
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//                .environmentObject(jobSearchViewModel)
+//                .environmentObject(vacansyViewModel)
+//        }
+//    }
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView().environmentObject(jobSearchViewModel)
+            WindowGroup {
+                VacansyView(helper: Helper())
+            }
         }
-    }
 }

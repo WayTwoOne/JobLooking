@@ -13,6 +13,9 @@ final class Coordinator: ObservableObject {
     @Published var page: MyPage = .home
     @Published var sheet: MySheet?
     
+    let helper = Helper()
+    let enteringTheReceivedCodeViewModel = EnteringTheReceivedCodeViewModel(numberOfFields: 4)
+    
     func goHome(){
         path.removeLast(path.count)
     }
@@ -22,7 +25,7 @@ final class Coordinator: ObservableObject {
     }
     
     func goToJobList() {
-        path.append(MyPage.joblis)
+        path.append(MyPage.vacansy)
     }
     
     func goToCurrentVacansy() {
@@ -37,15 +40,15 @@ final class Coordinator: ObservableObject {
     func getPage(_ page: MyPage) -> some View {
         switch page {
         case .home:
-            PersonalAccountView(helper: Helper())
+            PersonalAccountView(helper: helper)
         case .receivedCode:
-            EnteringTheReceivedCodeView(viewModel: EnteringTheReceivedCodeViewModel(numberOfFields: 4), helper: Helper())
-        case .joblis:
-            JobListView()
+            EnteringTheReceivedCodeView(viewModel: self.enteringTheReceivedCodeViewModel, helper: helper)
+        case .vacansy:
+            VacansyView(helper: helper)
         case .currentVacansy:
-            PersonalAccountView(helper: Helper())
+            PersonalAccountView(helper: helper)
         case .selectedVacancies:
-            PersonalAccountView(helper: Helper())
+            PersonalAccountView(helper: helper)
         }
     }
     
@@ -53,13 +56,13 @@ final class Coordinator: ObservableObject {
     func getSheet(_ sheet: MySheet) -> some View {
         switch sheet {
         case .popup:
-            JobSearchView(helper: Helper())
+            JobSearchView(helper: helper)
         }
     }
 }
 
 enum MyPage: String, CaseIterable, Identifiable {
-    case home, receivedCode, joblis, currentVacansy, selectedVacancies
+    case home, receivedCode, vacansy, currentVacansy, selectedVacancies
     
     var id: String { self.rawValue }
 }

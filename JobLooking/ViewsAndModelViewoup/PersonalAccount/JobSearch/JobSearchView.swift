@@ -49,7 +49,9 @@ struct JobSearchView: View {
 }
 
 struct JobSearchView_Previews: PreviewProvider {
+    @State static var viewModel = JobSearchViewModel()
     static var previews: some View {
         JobSearchView(helper: Helper())
+            .environmentObject(viewModel)
     }
 }

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70DE8E82BA8D4E400B53A9A /* JobListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */; };
+		E70DE8EA2BA8DDEA00B53A9A /* JobSearchByPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */; };
 		E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */; };
 		E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */; };
 		E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C922BA32D1300D408B7 /* JobModel.swift */; };
 		E7254C952BA32D3500D408B7 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C942BA32D3500D408B7 /* JobListViewModel.swift */; };
 		E7254C982BA32D6D00D408B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C972BA32D6D00D408B7 /* NetworkService.swift */; };
-		E7254C9A2BA32DEF00D408B7 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C992BA32DEF00D408B7 /* JobListView.swift */; };
+		E7254C9A2BA32DEF00D408B7 /* VacansyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C992BA32DEF00D408B7 /* VacansyView.swift */; };
 		E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */; };
 		E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */; };
 		E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */; };
@@ -32,12 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewCell.swift; sourceTree = "<group>"; };
+		E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchByPositionView.swift; sourceTree = "<group>"; };
 		E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeView.swift; sourceTree = "<group>"; };
 		E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchAPI.swift; sourceTree = "<group>"; };
 		E7254C922BA32D1300D408B7 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		E7254C942BA32D3500D408B7 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		E7254C972BA32D6D00D408B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		E7254C992BA32DEF00D408B7 /* JobListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListView.swift; sourceTree = "<group>"; };
+		E7254C992BA32DEF00D408B7 /* VacansyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyView.swift; sourceTree = "<group>"; };
 		E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountViewModel.swift; sourceTree = "<group>"; };
 		E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70DE8E62BA8D4CB00B53A9A /* JobListViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */,
+				E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */,
+			);
+			path = JobListViewCell;
+			sourceTree = "<group>";
+		};
 		E7254C8A2BA32C8900D408B7 /* JobList */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +102,8 @@
 		E7254C8C2BA32CA700D408B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E7254C992BA32DEF00D408B7 /* JobListView.swift */,
+				E7254C992BA32DEF00D408B7 /* VacansyView.swift */,
+				E70DE8E62BA8D4CB00B53A9A /* JobListViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,17 +397,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70DE8EA2BA8DDEA00B53A9A /* JobSearchByPositionView.swift in Sources */,
 				E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */,
 				E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */,
 				E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */,
 				E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */,
 				E7254C952BA32D3500D408B7 /* JobListViewModel.swift in Sources */,
-				E7254C9A2BA32DEF00D408B7 /* JobListView.swift in Sources */,
+				E7254C9A2BA32DEF00D408B7 /* VacansyView.swift in Sources */,
 				E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */,
 				E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */,
 				E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */,
 				E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */,
 				E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */,
+				E70DE8E82BA8D4E400B53A9A /* JobListViewCell.swift in Sources */,
 				E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */,
 				E72C29862BA760C900930A51 /* Coordinator.swift in Sources */,
 				E7254C982BA32D6D00D408B7 /* NetworkService.swift in Sources */,

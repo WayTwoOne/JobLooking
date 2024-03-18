@@ -12,7 +12,7 @@ struct Job: Codable {
     let vacancies: [Vacancy]
 }
 
-struct Offer: Codable {
+struct Offer: Codable, Identifiable{
     let id: String?
     let title: String
     let link: String

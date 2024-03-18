@@ -46,7 +46,6 @@ struct TextViewAndIcon: View {
                         .background(helper.gray)
                         .frame(height: 30)
                         .textContentType(.oneTimeCode)
-//                        .focused($hasFocus)
                         .keyboardType(.emailAddress)
                         .padding()
                         
