@@ -12,7 +12,8 @@ struct Job: Codable {
     let vacancies: [Vacancy]
 }
 
-struct Offer: Codable, Identifiable{
+struct Offer: Codable {
+    
     let id: String?
     let title: String
     let link: String
@@ -23,7 +24,7 @@ struct Button: Codable {
     let text: String
 }
 
-struct Vacancy: Identifiable, Codable {
+struct Vacancy: Codable {
     let id: String
     let lookingNumber: Int?
     let title: String

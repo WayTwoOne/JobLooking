@@ -13,17 +13,22 @@ struct VacansyView: View {
     
     var body: some View {
         VStack {
-            JobListViewCell(viewModel: viewModel, helper: helper)
-            ScrollView {
-                ForEach(viewModel.jobVacansy, id: \.title) { job in
-                    Text(job.title)
-                }
-                Text("\(viewModel.jobVacansy.count)")
-                    .foregroundColor(.red)
-            }
-            .navigationTitle("Job")
-            .task {
-                await viewModel.fetchDataPressed()
+            JobSearchByPositionView(helper: helper)
+            VStack(alignment: .leading) {
+                JobOffersView(viewModel: viewModel, helper: helper)
+                Text("Вакансии для вас")
+                    .font(.headline)
+                    .padding(.leading, 18)
+//                ScrollView {
+//                    ForEach(viewModel.jobVacansy, id: \.title) { job in
+//                        Text(job.title)
+//                    }
+//                    Text("\(viewModel.jobVacansy.count)")
+//                        .foregroundColor(.red)
+//                }
+//                .task {
+//                    await viewModel.fetchDataPressed()
+//                }
             }
         }
     }

@@ -11,14 +11,14 @@ struct JobSearchByPositionView: View {
     @State private var textInput = ""
     let helper: Helper
     
-    @Binding var width: CGFloat
-    @Binding var height: CGFloat
+    let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
     
     var body: some View {
         HStack {
             ZStack {
                 Rectangle()
-                    .frame(width: width * 0.9, height: height + 5)
+                    .frame(width: width * 0.75, height: height * 0.05)
                     .foregroundColor(helper.gray)
                     .cornerRadius(10)
                 HStack(alignment: .center) {
@@ -41,7 +41,7 @@ struct JobSearchByPositionView: View {
             SwiftUI.Button(action: {}) {
                 ZStack {
                     Rectangle()
-                        .frame(width: width * 0.11, height: height * 1.1)
+                        .frame(width: width * 0.14, height: height * 0.05)
                         .cornerRadius(10)
                         .foregroundColor(helper.gray)
                     Image("Union")
@@ -53,6 +53,6 @@ struct JobSearchByPositionView: View {
 
 struct JobSearchByPositionView_Previews: PreviewProvider {
     static var previews: some View {
-        JobSearchByPositionView(helper: Helper(), width: .constant(CGFloat(340)), height: .constant(CGFloat(40)))
+        JobSearchByPositionView(helper: Helper())
     }
 }

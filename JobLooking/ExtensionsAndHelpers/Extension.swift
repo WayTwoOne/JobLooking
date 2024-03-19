@@ -20,13 +20,39 @@ extension View {
     }
 }
 
-//extension Int {
-//     func days() -> String {
-//         var dayString: String!
-//         if "1".containsString("\(self % 10)")      {dayString = "день"}
-//         if "234".containsString("\(self % 10)")    {dayString = "дня" }
-//         if "567890".containsString("\(self % 10)") {dayString = "дней"}
-//         if 11...14 ~= self % 100                   {dayString = "дней"}
-//    return "\(self) " + dayString
-//    }
-//}
+extension Int {
+    func people() -> String {
+        var peopleString: String?
+        var fullString: String?
+        
+        if String(self) != "0" {
+            if "0".contains("\(self % 10)")      {peopleString = "человек"}
+            if "01".contains("\(self % 10)")      {peopleString = "человек"}
+            if "234".contains("\(self % 10)")    {peopleString = "человека"}
+            if 5...20 ~= self % 100              {peopleString = "человек"}
+            fullString = "\(self) " + (peopleString ?? "")
+        } else {
+            return ""
+        }
+        return "Сейчас просматривает \(fullString ?? "")"
+    }
+}
+
+extension String {
+    func dateFormatter() -> String {
+        
+        var date: String?
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        print(date)
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMMM"
+        
+        guard let date = dateFormatterGet.date(from: date ?? "") else { return ""}
+        print(dateFormatterPrint.string(from: date))
+        return dateFormatterPrint.string(from: date)
+    }
+}

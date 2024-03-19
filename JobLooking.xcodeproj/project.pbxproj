@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70DE8E82BA8D4E400B53A9A /* JobListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */; };
+		E70DE8E82BA8D4E400B53A9A /* JobOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DE8E72BA8D4E400B53A9A /* JobOffersView.swift */; };
 		E70DE8EA2BA8DDEA00B53A9A /* JobSearchByPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */; };
 		E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */; };
 		E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */; };
@@ -26,6 +26,8 @@
 		E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73526BB2BA628DC009D40C1 /* Extension.swift */; };
 		E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */; };
 		E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */; };
+		E747614E2BA980F20037A683 /* VacansyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747614D2BA980F20037A683 /* VacansyListView.swift */; };
+		E74761502BA98C890037A683 /* VacansyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747614F2BA98C890037A683 /* VacansyCardView.swift */; };
 		E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */; };
 		E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55B2BA3948800ACA82E /* ButtonsView.swift */; };
 		E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */; };
@@ -34,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewCell.swift; sourceTree = "<group>"; };
+		E70DE8E72BA8D4E400B53A9A /* JobOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOffersView.swift; sourceTree = "<group>"; };
 		E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchByPositionView.swift; sourceTree = "<group>"; };
 		E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeView.swift; sourceTree = "<group>"; };
 		E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchAPI.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		E73526BB2BA628DC009D40C1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForEmployeesView.swift; sourceTree = "<group>"; };
+		E747614D2BA980F20037A683 /* VacansyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyListView.swift; sourceTree = "<group>"; };
+		E747614F2BA98C890037A683 /* VacansyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyCardView.swift; sourceTree = "<group>"; };
 		E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewModel.swift; sourceTree = "<group>"; };
 		E766A55B2BA3948800ACA82E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAndIconView.swift; sourceTree = "<group>"; };
@@ -72,13 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E70DE8E62BA8D4CB00B53A9A /* JobListViewCell */ = {
+		E70DE8E62BA8D4CB00B53A9A /* JobListView */ = {
 			isa = PBXGroup;
 			children = (
-				E70DE8E72BA8D4E400B53A9A /* JobListViewCell.swift */,
+				E70DE8E72BA8D4E400B53A9A /* JobOffersView.swift */,
 				E70DE8E92BA8DDEA00B53A9A /* JobSearchByPositionView.swift */,
+				E747614D2BA980F20037A683 /* VacansyListView.swift */,
+				E747614F2BA98C890037A683 /* VacansyCardView.swift */,
 			);
-			path = JobListViewCell;
+			path = JobListView;
 			sourceTree = "<group>";
 		};
 		E7254C8A2BA32C8900D408B7 /* JobList */ = {
@@ -103,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E7254C992BA32DEF00D408B7 /* VacansyView.swift */,
-				E70DE8E62BA8D4CB00B53A9A /* JobListViewCell */,
+				E70DE8E62BA8D4CB00B53A9A /* JobListView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,15 +407,17 @@
 				E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */,
 				E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */,
 				E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */,
+				E747614E2BA980F20037A683 /* VacansyListView.swift in Sources */,
 				E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */,
 				E7254C952BA32D3500D408B7 /* JobListViewModel.swift in Sources */,
 				E7254C9A2BA32DEF00D408B7 /* VacansyView.swift in Sources */,
 				E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */,
 				E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */,
+				E74761502BA98C890037A683 /* VacansyCardView.swift in Sources */,
 				E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */,
 				E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */,
 				E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */,
-				E70DE8E82BA8D4E400B53A9A /* JobListViewCell.swift in Sources */,
+				E70DE8E82BA8D4E400B53A9A /* JobOffersView.swift in Sources */,
 				E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */,
 				E72C29862BA760C900930A51 /* Coordinator.swift in Sources */,
 				E7254C982BA32D6D00D408B7 /* NetworkService.swift in Sources */,

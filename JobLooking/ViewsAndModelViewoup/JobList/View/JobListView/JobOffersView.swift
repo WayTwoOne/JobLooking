@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JobListViewCell: View {
+struct JobOffersView: View {
     @ObservedObject var viewModel: JobsListViewModel
     let helper: Helper
     
@@ -56,15 +56,13 @@ struct JobListViewCell: View {
                 }
             }
         }
+        .frame(height: height / 5)
         .padding(.leading)
-        .task {
-            await viewModel.fetchDataPressed()
-        }
     }
 }
 
 struct JobListViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        JobListViewCell(viewModel: JobsListViewModel(), helper: Helper())
+        JobOffersView(viewModel: JobsListViewModel(), helper: Helper())
     }
 }
