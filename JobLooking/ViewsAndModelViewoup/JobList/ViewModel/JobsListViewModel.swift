@@ -1,34 +1,35 @@
 //
-//  JobListViewModel.swift
+//  TryCombine.swift
 //  JobLooking
 //
-//  Created by Vladimir on 14.03.2024.
+//  Created by Vladimir on 19.03.2024.
 //
 
 import Foundation
 import Combine
 
-@MainActor class JobsListViewModel: ObservableObject {
-    @Published var jobVacansy: [Vacancy] = []
-    @Published var jobOffers: [Offer] = []
-    @Published var isFavorite = false
+class JobsListViewModel: ObservableObject {
     
+    @Published var jobVacancy = [Vacancy]() 
+    @Published var jobOffers = [Offer]()
+    @Published var isFavorite = false
     @Published var favoriteVacancy: [Vacancy] = []
     
     var firstThreeElementsArray: [Vacancy] = []
     
-    func fetchDataPressed() async {
-        do {
-            let job = try await NetworkService.shared.fetchJob()
-            self.jobOffers = job.offers
-            self.jobVacansy = job.vacancies
-            self.onlyFirstThreeElementsInArray(with: job.vacancies)
-        } catch {
-            print(error)
-        }
+    private var cancellableSet: Set<AnyCancellable> = []
+    
+    init() {
+        NetworkService.shared.fetchDataWithCombine()
+            .assign(to: \.jobVacancy, on: self)
+            .store(in: &self.cancellableSet)
+        
+        NetworkService.shared.fetchDataWithCombine()
+            .assign(to: \.jobOffers, on: self)
+            .store(in: &self.cancellableSet)
+        
     }
- 
-//MARK: for JobOffersView func
+    
     func withoutUnnecessarySpaces(with title: String) -> String {
         var newTitle = title
         if newTitle.first == " " {
@@ -106,20 +107,7 @@ import Combine
     private let user = UserDefaults()
     
 //MARK: declination of month
-    func dateFormatter(with string: String?) -> String {
-        
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-        
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd MMMM"
-        
-        guard let date = dateFormatterGet.date(from: string ?? "") else { return ""}
-        
-        return dateFormatterPrint.string(from: date)
-    }
-    
-    func tryDateFromString(vacancy: Vacancy) -> String {
+    func dateFormatter(vacancy: Vacancy) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let newDate = dateFormatter.date(from: vacancy.publishedDate)

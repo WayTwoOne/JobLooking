@@ -22,22 +22,19 @@ struct VacansyView: View {
                     .foregroundColor(.white)
                     .padding(.leading, 18)
                 ScrollView() {
-                    ForEach(viewModel.firstThreeElementsArray, id: \.title) { job in
+                    ForEach(viewModel.jobVacancy, id: \.title) { job in
                         VacansyCardView(viewModel: viewModel, vacancy: job, helper: helper)
                             .padding(.horizontal)
                     }
-                    
+    
                     SwiftUI.Button(action: {}) {
-                        Text(viewModel.jobVacansy.count.vacancy())
+                        Text(viewModel.jobVacancy.count.vacancy())
                             .font(.system(size: 15))
                             .frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.height * 0.05, alignment: .center)
                             .foregroundColor(.white)
                             .background(Color.blue)
                             .cornerRadius(10)
                     }
-                }
-                .task {
-                    await viewModel.fetchDataPressed()
                 }
             }
         }

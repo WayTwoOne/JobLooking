@@ -62,7 +62,7 @@ struct VacansyCardView: View {
                             .font(.system(size: 14))
                             .foregroundColor(.white)
                     }
-                    Text("Опубликовано \(viewModel.tryDateFromString(vacancy: vacancy))")
+                    Text("Опубликовано \(viewModel.dateFormatter(vacancy: vacancy))")
                         .foregroundColor(helper.gray)
                     
                     SwiftUI.Button(action: {}) {
