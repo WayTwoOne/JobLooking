@@ -7,7 +7,36 @@
 
 import SwiftUI
 
+//MARK: extention Int
+extension Int {
+    func people() -> String {
+        var peopleString: String?
+        var fullString: String?
+        
+        if String(self) != "0" {
+            if "1".contains("\(self % 10)")         {peopleString = "человек"}
+            if "234".contains("\(self % 10)")       {peopleString = "человека"}
+            if "567890".contains("\(self % 10)")    {peopleString = "человек"}
+            
+            fullString = "\(self) " + (peopleString ?? "")
+        } else {
+            return ""
+        }
+        return "Сейчас просматривает \(fullString ?? "")"
+    }
+    
+    func vacancy() -> String {
+        var vacancy: String?
 
+            if "1".contains("\(self % 10)")         {vacancy = "вакансия"}
+            if "234".contains("\(self % 10)")       {vacancy = "вакансии"}
+            if "567890".contains("\(self % 10)")    {vacancy = "вакансий"}
+        
+        return "Еще \(self) \(vacancy ?? "")"
+    }
+}
+
+//MARK: extention View
 extension View {
     func sync<T: Equatable>(_ binding: Binding<T>, with focusState: FocusState<T>) -> some View {
         self
@@ -20,39 +49,9 @@ extension View {
     }
 }
 
-extension Int {
-    func people() -> String {
-        var peopleString: String?
-        var fullString: String?
-        
-        if String(self) != "0" {
-            if "0".contains("\(self % 10)")      {peopleString = "человек"}
-            if "01".contains("\(self % 10)")      {peopleString = "человек"}
-            if "234".contains("\(self % 10)")    {peopleString = "человека"}
-            if 5...20 ~= self % 100              {peopleString = "человек"}
-            fullString = "\(self) " + (peopleString ?? "")
-        } else {
-            return ""
-        }
-        return "Сейчас просматривает \(fullString ?? "")"
-    }
-}
-
-extension String {
-    func dateFormatter() -> String {
-        
-        var date: String?
-        
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-        
-        print(date)
-        
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd MMMM"
-        
-        guard let date = dateFormatterGet.date(from: date ?? "") else { return ""}
-        print(dateFormatterPrint.string(from: date))
-        return dateFormatterPrint.string(from: date)
+extension Image {
+    func heart() -> some View {
+        var image: Image?
+        return image?.resizable().frame(width: 20, height: 20)
     }
 }

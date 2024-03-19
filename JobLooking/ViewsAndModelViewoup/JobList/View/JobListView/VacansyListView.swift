@@ -12,7 +12,7 @@ struct VacansyListView: View {
     let helper: Helper
     
     var body: some View {
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView(.vertical, showsIndicators: false) {
                 ForEach(viewModel.firstThreeElementsArray, id: \.title) { vacancy in
                     VacansyCardView(viewModel: viewModel, vacancy: vacancy, helper: helper)
                 }
@@ -22,12 +22,12 @@ struct VacansyListView: View {
                 .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .ignoresSafeArea()
         }
-        .onAppear {
-            Task {
-                await viewModel.fetchDataPressed()
-            }
-            
-        }
+//        .onAppear {
+//            Task {
+//                await viewModel.fetchDataPressed()
+//            }
+//            
+//        }
     }
 }
 

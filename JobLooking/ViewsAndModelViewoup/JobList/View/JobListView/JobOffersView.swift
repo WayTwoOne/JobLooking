@@ -56,8 +56,8 @@ struct JobOffersView: View {
                 }
             }
         }
-        .frame(height: height / 5)
-        .padding(.leading)
+        .frame(height: height / 5.5)
+        .padding(.leading, 10)
     }
 }
 

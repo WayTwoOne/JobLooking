@@ -21,7 +21,7 @@ struct JobLookingApp: App {
     
     var body: some Scene {
             WindowGroup {
-                VacansyListView(viewModel: JobsListViewModel(), helper: Helper())
+                VacansyView(helper: Helper())
             }
         }
 }

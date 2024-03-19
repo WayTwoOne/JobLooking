@@ -11,8 +11,8 @@ struct JobSearchByPositionView: View {
     @State private var textInput = ""
     let helper: Helper
     
-    let width = UIScreen.main.bounds.width
-    let height = UIScreen.main.bounds.height
+    private let width = UIScreen.main.bounds.width
+    private let height = UIScreen.main.bounds.height
     
     var body: some View {
         HStack {
@@ -34,7 +34,7 @@ struct JobSearchByPositionView: View {
                         .frame(width: 250)
                         .textContentType(.oneTimeCode)
                         .keyboardType(.default)
-                        
+                    
                     
                 }
             }
