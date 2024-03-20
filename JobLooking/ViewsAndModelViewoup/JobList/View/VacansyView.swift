@@ -24,8 +24,9 @@ struct VacansyView: View {
                 ScrollView() {
                     ForEach(viewModel.jobVacancy, id: \.title) { job in
                         VacansyCardView(viewModel: viewModel, vacancy: job, helper: helper)
-                            .padding(.horizontal)
+                            .padding(.bottom)
                     }
+                    .padding(.horizontal)
     
                     SwiftUI.Button(action: {}) {
                         Text(viewModel.jobVacancy.count.vacancy())

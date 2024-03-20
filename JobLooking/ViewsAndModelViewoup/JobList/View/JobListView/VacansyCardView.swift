@@ -77,8 +77,8 @@ struct VacansyCardView: View {
                     .padding([.leading, .trailing], 5)
                     
                 }
+                .padding(.leading, width * 0.1)
                 .frame(width: width * 0.8, height: height * 0.1)
-                .padding(.leading, width * 0.07)
                 
                 SwiftUI.Button(action: {
                     viewModel.isFavorite ?
@@ -87,14 +87,15 @@ struct VacansyCardView: View {
                 }) {
                     if !viewModel.isFavorite {
                         Image(systemName: "heart")
-                            .heart()
+                            .resizable().frame(width: 20, height: 20)
                     } else {
                         Image(systemName: "suit.heart.fill")
-                            .heart()
+                            .resizable().frame(width: 20, height: 20)
                             .foregroundColor(.blue)
                     }
                 }
                 .padding(.bottom, viewModel.rectangleHeight(vacancy, and: height) * 0.77)
+                .padding(.leading)
             }
         }
     }

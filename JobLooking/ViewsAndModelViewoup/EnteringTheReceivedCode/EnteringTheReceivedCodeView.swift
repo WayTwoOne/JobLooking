@@ -49,6 +49,10 @@ struct EnteringTheReceivedCodeView: View {
                 .background(viewModel.isButtonDisable ? helper.bluedisable : helper.blueAble)
                 .cornerRadius(10)
             }
+            .background {
+                Color.black
+                    .ignoresSafeArea()
+            }
             
             .onChange(of: viewModel.isButtonDisable, perform: { newValue in
                 viewModel.ableButton()

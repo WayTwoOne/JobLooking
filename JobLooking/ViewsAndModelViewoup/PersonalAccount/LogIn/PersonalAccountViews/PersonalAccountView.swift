@@ -36,6 +36,7 @@ struct PersonalAccountView: View {
     }
 }
 
+
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         PersonalAccountView(helper: Helper())
