@@ -12,8 +12,7 @@
 		E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */; };
 		E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */; };
 		E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C922BA32D1300D408B7 /* JobModel.swift */; };
-		E7254C9A2BA32DEF00D408B7 /* VacansyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C992BA32DEF00D408B7 /* VacansyView.swift */; };
-		E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */; };
+		E7254C9A2BA32DEF00D408B7 /* VacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C992BA32DEF00D408B7 /* VacancyView.swift */; };
 		E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */; };
 		E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */; };
 		E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72705772BA30B090059A7B7 /* JobLookingApp.swift */; };
@@ -24,15 +23,23 @@
 		E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73526BB2BA628DC009D40C1 /* Extension.swift */; };
 		E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */; };
 		E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */; };
+		E7404A2C2BAC5E29007D4D6E /* TitlePartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */; };
+		E7404A2E2BAC5ECE007D4D6E /* MapCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A2D2BAC5ECE007D4D6E /* MapCompanyView.swift */; };
+		E7404A302BAC5FC6007D4D6E /* QuestionsPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A2F2BAC5FC6007D4D6E /* QuestionsPartView.swift */; };
+		E7404A352BAC85CC007D4D6E /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A342BAC85CC007D4D6E /* CustomTabBarView.swift */; };
+		E7404A392BAC919C007D4D6E /* CustomTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A382BAC919C007D4D6E /* CustomTabBarViewModel.swift */; };
+		E7404A3B2BACACD3007D4D6E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A3A2BACACD3007D4D6E /* ContentViewModel.swift */; };
 		E747614E2BA980F20037A683 /* VacansyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747614D2BA980F20037A683 /* VacansyListView.swift */; };
 		E74761502BA98C890037A683 /* VacansyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747614F2BA98C890037A683 /* VacansyCardView.swift */; };
-		E74761522BAA34770037A683 /* NetworkServiceCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74761512BAA34770037A683 /* NetworkServiceCombine.swift */; };
+		E74761522BAA34770037A683 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74761512BAA34770037A683 /* NetworkService.swift */; };
 		E74761542BAA42D20037A683 /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74761532BAA42D20037A683 /* JobsListViewModel.swift */; };
 		E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */; };
 		E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55B2BA3948800ACA82E /* ButtonsView.swift */; };
 		E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */; };
 		E782FDE62BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FDE52BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift */; };
 		E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */; };
+		E7B5388E2BAB9D3600CB6EED /* CurrentVacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5388D2BAB9D3600CB6EED /* CurrentVacancyView.swift */; };
+		E7B538922BAB9D5300CB6EED /* CurrentVacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B538912BAB9D5300CB6EED /* CurrentVacancyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +48,7 @@
 		E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeView.swift; sourceTree = "<group>"; };
 		E7254C902BA32CE200D408B7 /* JobSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchAPI.swift; sourceTree = "<group>"; };
 		E7254C922BA32D1300D408B7 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
-		E7254C992BA32DEF00D408B7 /* VacansyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyView.swift; sourceTree = "<group>"; };
-		E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountViewModel.swift; sourceTree = "<group>"; };
+		E7254C992BA32DEF00D408B7 /* VacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyView.swift; sourceTree = "<group>"; };
 		E7254CA42BA3496800D408B7 /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchView.swift; sourceTree = "<group>"; };
 		E72705742BA30B090059A7B7 /* JobLooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobLooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,15 +60,23 @@
 		E73526BB2BA628DC009D40C1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForEmployeesView.swift; sourceTree = "<group>"; };
+		E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePartView.swift; sourceTree = "<group>"; };
+		E7404A2D2BAC5ECE007D4D6E /* MapCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCompanyView.swift; sourceTree = "<group>"; };
+		E7404A2F2BAC5FC6007D4D6E /* QuestionsPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPartView.swift; sourceTree = "<group>"; };
+		E7404A342BAC85CC007D4D6E /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		E7404A382BAC919C007D4D6E /* CustomTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewModel.swift; sourceTree = "<group>"; };
+		E7404A3A2BACACD3007D4D6E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E747614D2BA980F20037A683 /* VacansyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyListView.swift; sourceTree = "<group>"; };
 		E747614F2BA98C890037A683 /* VacansyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacansyCardView.swift; sourceTree = "<group>"; };
-		E74761512BAA34770037A683 /* NetworkServiceCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceCombine.swift; sourceTree = "<group>"; };
+		E74761512BAA34770037A683 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E74761532BAA42D20037A683 /* JobsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListViewModel.swift; sourceTree = "<group>"; };
 		E766A5572BA3783B00ACA82E /* JobSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewModel.swift; sourceTree = "<group>"; };
 		E766A55B2BA3948800ACA82E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		E766A55D2BA3949E00ACA82E /* TextViewAndIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAndIconView.swift; sourceTree = "<group>"; };
 		E782FDE52BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeViewModel.swift; sourceTree = "<group>"; };
 		E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeTextFieldView.swift; sourceTree = "<group>"; };
+		E7B5388D2BAB9D3600CB6EED /* CurrentVacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVacancyView.swift; sourceTree = "<group>"; };
+		E7B538912BAB9D5300CB6EED /* CurrentVacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVacancyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +122,7 @@
 		E7254C8C2BA32CA700D408B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E7254C992BA32DEF00D408B7 /* VacansyView.swift */,
+				E7254C992BA32DEF00D408B7 /* VacancyView.swift */,
 				E70DE8E62BA8D4CB00B53A9A /* JobListView */,
 			);
 			path = View;
@@ -133,7 +147,7 @@
 		E7254C962BA32D5A00D408B7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E74761512BAA34770037A683 /* NetworkServiceCombine.swift */,
+				E74761512BAA34770037A683 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -142,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				E7254CA62BA34C9B00D408B7 /* LogIn */,
-				E7254CA72BA34D3600D408B7 /* JobSearch */,
 				E7254CA82BA34D4700D408B7 /* SearchForEmployees */,
 			);
 			path = PersonalAccount;
@@ -156,31 +169,23 @@
 			path = PersonalAccountViews;
 			sourceTree = "<group>";
 		};
-		E7254CA12BA3494100D408B7 /* PersonalAccountViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				E7254CA22BA3495D00D408B7 /* PersonalAccountViewModel.swift */,
-			);
-			path = PersonalAccountViewModels;
-			sourceTree = "<group>";
-		};
 		E7254CA62BA34C9B00D408B7 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				E7254CA12BA3494100D408B7 /* PersonalAccountViewModels */,
 				E7254CA02BA3493300D408B7 /* PersonalAccountViews */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
 		};
-		E7254CA72BA34D3600D408B7 /* JobSearch */ = {
+		E7254CA72BA34D3600D408B7 /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
 				E7254CAE2BA3519A00D408B7 /* JobSearchView.swift */,
+				E7254C9F2BA3492B00D408B7 /* PersonalAccount */,
 				E7254CAA2BA34D8000D408B7 /* JobSearchViews */,
 				E7254CA92BA34D6500D408B7 /* JobSearchViewModels */,
 			);
-			path = JobSearch;
+			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
 		E7254CA82BA34D4700D408B7 /* SearchForEmployees */ = {
@@ -236,9 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				E72705772BA30B090059A7B7 /* JobLookingApp.swift */,
-				E72705792BA30B090059A7B7 /* ContentView.swift */,
-				E72C29842BA760AF00930A51 /* Coordinator */,
-				E72C29832BA7608500930A51 /* ViewsAndModelViewoup */,
+				E72C29852BA760C900930A51 /* Coordinator.swift */,
+				E72C29842BA760AF00930A51 /* ViewAndCoordinator */,
 				E7254C8F2BA32CC600D408B7 /* Api */,
 				E7254C962BA32D5A00D408B7 /* Services */,
 				E73526BD2BA6297D009D40C1 /* ExtensionsAndHelpers */,
@@ -259,19 +263,22 @@
 		E72C29832BA7608500930A51 /* ViewsAndModelViewoup */ = {
 			isa = PBXGroup;
 			children = (
-				E7254C9F2BA3492B00D408B7 /* PersonalAccount */,
+				E7254CA72BA34D3600D408B7 /* WelcomeScreen */,
 				E782FDE22BA59FBD002189AB /* EnteringTheReceivedCode */,
 				E7254C8A2BA32C8900D408B7 /* JobList */,
+				E7B5388C2BAB9D1C00CB6EED /* CurrentVacancy */,
+				E7404A332BAC85B7007D4D6E /* CustomTabBar */,
 			);
 			path = ViewsAndModelViewoup;
 			sourceTree = "<group>";
 		};
-		E72C29842BA760AF00930A51 /* Coordinator */ = {
+		E72C29842BA760AF00930A51 /* ViewAndCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				E72C29852BA760C900930A51 /* Coordinator.swift */,
+				E7404A3C2BACB4F3007D4D6E /* ContentView */,
+				E72C29832BA7608500930A51 /* ViewsAndModelViewoup */,
 			);
-			path = Coordinator;
+			path = ViewAndCoordinator;
 			sourceTree = "<group>";
 		};
 		E73526BD2BA6297D009D40C1 /* ExtensionsAndHelpers */ = {
@@ -281,6 +288,34 @@
 				E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */,
 			);
 			path = ExtensionsAndHelpers;
+			sourceTree = "<group>";
+		};
+		E7404A2A2BAC5E05007D4D6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */,
+				E7404A2D2BAC5ECE007D4D6E /* MapCompanyView.swift */,
+				E7404A2F2BAC5FC6007D4D6E /* QuestionsPartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7404A332BAC85B7007D4D6E /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E7404A342BAC85CC007D4D6E /* CustomTabBarView.swift */,
+				E7404A382BAC919C007D4D6E /* CustomTabBarViewModel.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		E7404A3C2BACB4F3007D4D6E /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				E72705792BA30B090059A7B7 /* ContentView.swift */,
+				E7404A3A2BACACD3007D4D6E /* ContentViewModel.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 		E766A5592BA3946400ACA82E /* TextViewAndIcon */ = {
@@ -304,17 +339,17 @@
 			children = (
 				E719D1BD2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift */,
 				E782FDE42BA59FE2002189AB /* EnteringTheReceivedCodeViewModel */,
-				E782FDE32BA59FCF002189AB /* EnteringTheReceivedCodeViewGroup */,
+				E782FDE32BA59FCF002189AB /* PinCodeView */,
 			);
 			path = EnteringTheReceivedCode;
 			sourceTree = "<group>";
 		};
-		E782FDE32BA59FCF002189AB /* EnteringTheReceivedCodeViewGroup */ = {
+		E782FDE32BA59FCF002189AB /* PinCodeView */ = {
 			isa = PBXGroup;
 			children = (
 				E782FDE92BA5B36C002189AB /* PinCodeTextFields */,
 			);
-			path = EnteringTheReceivedCodeViewGroup;
+			path = PinCodeView;
 			sourceTree = "<group>";
 		};
 		E782FDE42BA59FE2002189AB /* EnteringTheReceivedCodeViewModel */ = {
@@ -331,6 +366,32 @@
 				E782FDE72BA5AA6D002189AB /* PinCodeTextFieldView.swift */,
 			);
 			path = PinCodeTextFields;
+			sourceTree = "<group>";
+		};
+		E7B5388C2BAB9D1C00CB6EED /* CurrentVacancy */ = {
+			isa = PBXGroup;
+			children = (
+				E7B538902BAB9D4100CB6EED /* ViewModels */,
+				E7B5388F2BAB9D3B00CB6EED /* Views */,
+			);
+			path = CurrentVacancy;
+			sourceTree = "<group>";
+		};
+		E7B5388F2BAB9D3B00CB6EED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7B5388D2BAB9D3600CB6EED /* CurrentVacancyView.swift */,
+				E7404A2A2BAC5E05007D4D6E /* Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7B538902BAB9D4100CB6EED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E7B538912BAB9D5300CB6EED /* CurrentVacancyViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,24 +470,31 @@
 				E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */,
 				E747614E2BA980F20037A683 /* VacansyListView.swift in Sources */,
 				E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */,
-				E7254C9A2BA32DEF00D408B7 /* VacansyView.swift in Sources */,
+				E7B5388E2BAB9D3600CB6EED /* CurrentVacancyView.swift in Sources */,
+				E7254C9A2BA32DEF00D408B7 /* VacancyView.swift in Sources */,
 				E7254CA52BA3496800D408B7 /* PersonalAccountView.swift in Sources */,
 				E74761542BAA42D20037A683 /* JobsListViewModel.swift in Sources */,
 				E727057A2BA30B090059A7B7 /* ContentView.swift in Sources */,
+				E7404A302BAC5FC6007D4D6E /* QuestionsPartView.swift in Sources */,
 				E74761502BA98C890037A683 /* VacansyCardView.swift in Sources */,
 				E7254C932BA32D1300D408B7 /* JobModel.swift in Sources */,
+				E7B538922BAB9D5300CB6EED /* CurrentVacancyViewModel.swift in Sources */,
+				E7404A2E2BAC5ECE007D4D6E /* MapCompanyView.swift in Sources */,
 				E72705782BA30B090059A7B7 /* JobLookingApp.swift in Sources */,
 				E766A55C2BA3948800ACA82E /* ButtonsView.swift in Sources */,
 				E70DE8E82BA8D4E400B53A9A /* JobOffersView.swift in Sources */,
 				E719D1BE2BA6F9C200E1634E /* EnteringTheReceivedCodeView.swift in Sources */,
+				E7404A2C2BAC5E29007D4D6E /* TitlePartView.swift in Sources */,
 				E72C29862BA760C900930A51 /* Coordinator.swift in Sources */,
 				E766A5582BA3783B00ACA82E /* JobSearchViewModel.swift in Sources */,
-				E74761522BAA34770037A683 /* NetworkServiceCombine.swift in Sources */,
-				E7254CA32BA3495D00D408B7 /* PersonalAccountViewModel.swift in Sources */,
+				E74761522BAA34770037A683 /* NetworkService.swift in Sources */,
+				E7404A3B2BACACD3007D4D6E /* ContentViewModel.swift in Sources */,
 				E7254CAF2BA3519A00D408B7 /* JobSearchView.swift in Sources */,
 				E7254C912BA32CE200D408B7 /* JobSearchAPI.swift in Sources */,
 				E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */,
 				E782FDE62BA5A77C002189AB /* EnteringTheReceivedCodeViewModel.swift in Sources */,
+				E7404A352BAC85CC007D4D6E /* CustomTabBarView.swift in Sources */,
+				E7404A392BAC919C007D4D6E /* CustomTabBarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,6 +54,12 @@ extension Image {
         let image = Image(name)
         return image.resizable().frame(width: 20, height: 20)
     }
+    
+    func renderingMode() -> some View {
+        var image: Image?
+        return image?.renderingMode(.template).foregroundColor(.blue)
+            
+    }
 }
 
 extension UINavigationController {
@@ -62,14 +68,5 @@ extension UINavigationController {
         appearance.backgroundColor = .black
         
         navigationBar.standardAppearance = appearance
-    }
-}
-
-extension UITabBarController {
-    override open func viewDidLoad() {
-        let appearance = UITabBarAppearance()
-        appearance.backgroundColor = .black
-        
-        tabBar.standardAppearance = appearance
     }
 }
