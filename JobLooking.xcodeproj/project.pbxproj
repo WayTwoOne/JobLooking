@@ -21,6 +21,7 @@
 		E727057F2BA30B0B0059A7B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */; };
 		E72C29862BA760C900930A51 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C29852BA760C900930A51 /* Coordinator.swift */; };
 		E73526BC2BA628DC009D40C1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73526BB2BA628DC009D40C1 /* Extension.swift */; };
+		E73DE5832BADA875001E9B53 /* PeopleLookingFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DE5822BADA875001E9B53 /* PeopleLookingFields.swift */; };
 		E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */; };
 		E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */; };
 		E7404A2C2BAC5E29007D4D6E /* TitlePartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */; };
@@ -58,6 +59,7 @@
 		E727057E2BA30B0B0059A7B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E72C29852BA760C900930A51 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E73526BB2BA628DC009D40C1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E73DE5822BADA875001E9B53 /* PeopleLookingFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleLookingFields.swift; sourceTree = "<group>"; };
 		E73F5FAF2BA49C2E0029B1E6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E73F5FB12BA4D90B0029B1E6 /* SearchForEmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForEmployeesView.swift; sourceTree = "<group>"; };
 		E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePartView.swift; sourceTree = "<group>"; };
@@ -290,10 +292,19 @@
 			path = ExtensionsAndHelpers;
 			sourceTree = "<group>";
 		};
-		E7404A2A2BAC5E05007D4D6E /* Views */ = {
+		E73DE5812BADA851001E9B53 /* TitleAndGreenFields */ = {
 			isa = PBXGroup;
 			children = (
 				E7404A2B2BAC5E29007D4D6E /* TitlePartView.swift */,
+				E73DE5822BADA875001E9B53 /* PeopleLookingFields.swift */,
+			);
+			path = TitleAndGreenFields;
+			sourceTree = "<group>";
+		};
+		E7404A2A2BAC5E05007D4D6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E73DE5812BADA851001E9B53 /* TitleAndGreenFields */,
 				E7404A2D2BAC5ECE007D4D6E /* MapCompanyView.swift */,
 				E7404A2F2BAC5FC6007D4D6E /* QuestionsPartView.swift */,
 			);
@@ -467,6 +478,7 @@
 				E70DE8EA2BA8DDEA00B53A9A /* JobSearchByPositionView.swift in Sources */,
 				E766A55E2BA3949E00ACA82E /* TextViewAndIconView.swift in Sources */,
 				E73F5FB02BA49C2E0029B1E6 /* Helper.swift in Sources */,
+				E73DE5832BADA875001E9B53 /* PeopleLookingFields.swift in Sources */,
 				E73F5FB22BA4D90B0029B1E6 /* SearchForEmployeesView.swift in Sources */,
 				E747614E2BA980F20037A683 /* VacansyListView.swift in Sources */,
 				E782FDE82BA5AA6D002189AB /* PinCodeTextFieldView.swift in Sources */,

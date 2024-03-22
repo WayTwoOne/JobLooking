@@ -22,7 +22,6 @@ struct VacansyCardView: View {
     var body: some View {
             ZStack {
                 SwiftUI.Button(action: {
-                    viewModel.bool.toggle()
                     viewModel.appendToCurrent(vacancy: vacancy)
                     viewModel.pushToCurrentVacancy(coordinator: coordinator)
                 }) {
@@ -34,7 +33,7 @@ struct VacansyCardView: View {
                 HStack {
                     VStack (alignment: .leading, spacing: 10) {
                         if viewModel.isSomeoneLokingAt(vacancy) {
-                            Text(vacancy.lookingNumber?.people() ?? "")
+                            Text("Сейчас просматривает \(vacancy.lookingNumber?.people() ?? "")")
                                 .font(.system(size: 13))
                                 .foregroundColor(.green)
                         }

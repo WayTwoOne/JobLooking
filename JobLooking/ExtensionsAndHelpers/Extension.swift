@@ -22,7 +22,7 @@ extension Int {
         } else {
             return ""
         }
-        return "Сейчас просматривает \(fullString ?? "")"
+        return "\(fullString ?? "")"
     }
     
     func vacancy() -> String {

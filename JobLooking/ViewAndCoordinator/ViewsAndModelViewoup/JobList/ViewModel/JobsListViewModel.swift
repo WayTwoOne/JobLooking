@@ -15,7 +15,7 @@ class JobsListViewModel: ObservableObject {
     @Published var isFavorite = false
     @Published var favoriteVacancy = [Vacancy]()
     
-    @Published private(set) var currentVacancy: [Vacancy] = []
+    @Published var currentVacancy: [Vacancy] = []
     
     @Published var bool = false
     

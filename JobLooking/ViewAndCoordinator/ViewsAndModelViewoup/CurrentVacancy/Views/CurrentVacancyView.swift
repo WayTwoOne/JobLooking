@@ -12,7 +12,7 @@ struct CurrentVacancyView: View {
     @EnvironmentObject var lastViewModel: JobsListViewModel
     @EnvironmentObject var coordinator: Coordinator
     
-
+    
     let helper: Helper
     
     let width = UIScreen.main.bounds.width * 0.95
@@ -23,22 +23,35 @@ struct CurrentVacancyView: View {
             ScrollView {
                 ForEach(lastViewModel.currentVacancy, id: \.id) { job in
                     VStack(alignment: .leading, spacing: 10) {
-                        TitlePartView(viewModel: viewModel, job: job)
+                        TitlePartView(viewModel: viewModel, job: job, helper: helper)
                         
-                        MapCompanyView(viewModel: viewModel, helper: helper, job: job, width: width, height: height)
-                        Text(job.description ?? "")
-                        
-                        Text("Ваши задачи")
-                            .font(.title)
-                        
-                        Text(job.responsibilities )
-                        
-                        Text("Задайте вопрос работодателю")
-                            .foregroundColor(.white)
-                        
-                        Text("Он получит его с откликом на вакансию")
-                        
-                        QuestionsPartView(viewModel: viewModel, job: job)
+                        MapCompanyView(viewModel: viewModel, helper: helper, job: job)
+                        VStack(alignment: .leading, spacing: 15) {
+                            Text(job.description ?? "")
+                                .foregroundColor(.white)
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("Ваши задачи")
+                                    .font(.title2)
+                                    .bold()
+                                    .foregroundColor(.white)
+                                
+                                Text(job.responsibilities )
+                                    .foregroundColor(.white)
+                            }
+                            
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("Задайте вопрос работодателю")
+                                    .foregroundColor(.white)
+                                Text("Он получит его с откликом на вакансию")
+                                    .foregroundColor(helper.gray)
+                            }
+                            .padding(.bottom)
+                            
+                            QuestionsPartView(viewModel: viewModel, job: job, helper: helper)
+                        }
+                        .padding(.horizontal, 15)
+                        .padding(.bottom)
                         
                         SwiftUI.Button(action: {}) {
                             Text("Откликнуться")
@@ -48,13 +61,14 @@ struct CurrentVacancyView: View {
                                 .background(Color.green)
                                 .cornerRadius(10)
                         }
+                        .padding(.horizontal)
                     }
                     
                 }
             }
-           
+            .background(Color.black)
+            
         }
-        .environmentObject(lastViewModel)
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -66,18 +80,18 @@ struct CurrentVacancyView: View {
                         .foregroundColor(.green)
                 }
             }
-            
-        }
-        .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ForEach(0..<3) { image in
+                HStack {
+                    ForEach(0..<3) { image in
                     SwiftUI.Button(action: {}) {
                         Image(viewModel.imageNames[image])
-                            .renderingMode()
+                            .renderingMode(.template)
                             .foregroundColor(.green)
+                    }
                     }
                 }
             }
+            
         }
         
     }

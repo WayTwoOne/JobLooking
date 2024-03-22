@@ -15,5 +15,7 @@ class Helper {
     let bluedisable = Color(#colorLiteral(red: 0, green: 0.3358300924, blue: 0.5637645721, alpha: 1))
     let blueAble = Color(#colorLiteral(red: 0.2073816359, green: 0.5835246444, blue: 0.9980860353, alpha: 1))
     let mainRectangleColor = Color(#colorLiteral(red: 0.1776687205, green: 0.1831440926, blue: 0.1930666268, alpha: 1))
+    
+    let darkGreen = Color(#colorLiteral(red: 0.003921568627, green: 0.3490196078, blue: 0.01960784314, alpha: 1))
 
 }
