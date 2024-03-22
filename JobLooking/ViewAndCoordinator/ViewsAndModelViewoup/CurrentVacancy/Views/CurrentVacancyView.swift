@@ -60,6 +60,7 @@ struct CurrentVacancyView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 SwiftUI.Button {
                     viewModel.goBackToVacancyList(with: coordinator)
+                    lastViewModel.removeCurrentVacancy()
                 } label: {
                     Image(systemName: "arrow.backward")
                         .foregroundColor(.green)

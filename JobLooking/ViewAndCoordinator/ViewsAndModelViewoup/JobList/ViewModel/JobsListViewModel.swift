@@ -15,7 +15,7 @@ class JobsListViewModel: ObservableObject {
     @Published var isFavorite = false
     @Published var favoriteVacancy = [Vacancy]()
     
-    @Published var currentVacancy = [Vacancy]()
+    @Published private(set) var currentVacancy: [Vacancy] = []
     
     @Published var bool = false
     
@@ -35,6 +35,7 @@ class JobsListViewModel: ObservableObject {
             .store(in: &self.cancellableSet)
 
     }
+
     
     func withoutUnnecessarySpaces(with title: String) -> String {
         var newTitle = title
@@ -139,6 +140,10 @@ class JobsListViewModel: ObservableObject {
     
     func appendToCurrent(vacancy: Vacancy) {
         currentVacancy.append(vacancy)
+    }
+    
+    func removeCurrentVacancy() {
+        currentVacancy.removeLast()
     }
     
 //MARK: declination of month

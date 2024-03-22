@@ -23,6 +23,7 @@ struct VacansyCardView: View {
             ZStack {
                 SwiftUI.Button(action: {
                     viewModel.bool.toggle()
+                    viewModel.appendToCurrent(vacancy: vacancy)
                     viewModel.pushToCurrentVacancy(coordinator: coordinator)
                 }) {
                     Rectangle()

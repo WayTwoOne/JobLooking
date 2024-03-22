@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VacancyView: View {
-    @ObservedObject var viewModel = JobsListViewModel()
+    @EnvironmentObject var viewModel: JobsListViewModel
     @EnvironmentObject var coordinator: Coordinator
     var helper: Helper
     
@@ -40,6 +40,8 @@ struct VacancyView: View {
                     }
                 }
             }
+            .environmentObject(viewModel)
+
             .background {
                 Color.black
                     .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
