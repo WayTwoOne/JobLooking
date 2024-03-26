@@ -86,12 +86,16 @@ struct VacansyCardView: View {
                     .frame(width: width * 0.8, height: height * 0.1)
                     
                     SwiftUI.Button(action: {
-                        toggle ?
-                        viewModel.iDontLikeThisVacancy(vacancy: vacancy) :
-                        viewModel.iLikeThisVacancy(vacancy: vacancy)
-                        print(toggle)
-                        toggle = viewModel.isThisVacancyIsFavorite(vacancy: vacancy)
-                        print(toggle)
+                        if viewModel.emptyFavoriteVacancysArray(vacancy: vacancy) {
+                            viewModel.iLikeThisVacancy(vacancy: vacancy)
+                            toggle.toggle()
+                        } else if viewModel.doIHaveThisVacancy(vacancy: vacancy) {
+                            viewModel.iDontLikeThisVacancy(vacancy: vacancy)
+                            toggle.toggle()
+                        } else {
+                            viewModel.iLikeThisVacancy(vacancy: vacancy)
+                            toggle.toggle()
+                        }
                     }, label: {
                         if toggle {
                             Image(systemName: "suit.heart.fill")

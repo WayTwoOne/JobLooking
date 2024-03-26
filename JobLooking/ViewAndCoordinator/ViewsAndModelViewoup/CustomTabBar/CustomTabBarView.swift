@@ -9,38 +9,42 @@ import SwiftUI
 
 struct CustomTabBarView: View {
     @StateObject var viewModel = CustomTabBarViewModel()
+    @EnvironmentObject var jobListViewModel: JobsListViewModel
+    
+    @Binding var tabSelcted: Int
     
     var body: some View {
         VStack {
             HStack {
-                ForEach(viewModel.allCases, id: \.rawValue) { tab in
+                ForEach(0..<5) { index in
                     Spacer()
-                    VStack {
-                        Image(tab.rawValue)
-                            .renderingMode(.template)
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(viewModel.tapped == tab ? .blue : .white)
-                        Text(viewModel.textUnderImage(with: tab))
-                            .foregroundColor(viewModel.tapped == tab ? .blue : .white)
-                            .font(.system(size: 9))
+                    SwiftUI.Button {
+                        tabSelcted = index + 1
+                    } label: {
+                        VStack {
+                            Image(viewModel.tabBarItems[index].image)
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                            Text(viewModel.tabBarItems[index].title)
+                                .font(.system(size: 9))
+                        }
                     }
-                    .onTapGesture {
-                        viewModel.tapped = tab
-                    }
+                    
+                    .foregroundColor(index + 1 == tabSelcted ? .blue : .white)
+                        
                     Spacer()
                 }
-                
-                .frame(width: UIScreen.main.bounds.width, height: 50)
-                .background(Color.black)
             }
+            .frame(width: UIScreen.main.bounds.width, height: 50)
+            .background(Color.black)
         }
+        .environmentObject(jobListViewModel)
     }
 }
 
-//struct CustomTabBar_Previews: PreviewProvider {
-//    @State var tab = Tab.magnifier
-//    static var previews: some View {
-//        CustomTabBarView(selectedTab: .constant(.messages))
-//    }
-//}
+struct CustomTabBar_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomTabBarView(viewModel: CustomTabBarViewModel(), tabSelcted: .constant(1))
+    }
+}

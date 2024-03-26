@@ -32,7 +32,7 @@ extension Int {
             if "234".contains("\(self % 10)")       {vacancy = "вакансии"}
             if "567890".contains("\(self % 10)")    {vacancy = "вакансий"}
         
-        return "Еще \(self) \(vacancy ?? "")"
+        return "\(self) \(vacancy ?? "")"
     }
 }
 
@@ -53,12 +53,6 @@ extension Image {
     func heart(name: String) -> some View {
         let image = Image(name)
         return image.resizable().frame(width: 20, height: 20)
-    }
-    
-    func renderingMode() -> some View {
-        var image: Image?
-        return image?.renderingMode(.template).foregroundColor(.blue)
-            
     }
 }
 

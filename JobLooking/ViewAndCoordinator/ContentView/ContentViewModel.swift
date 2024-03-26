@@ -8,7 +8,8 @@
 import Foundation
 
 class ContentViewModel: ObservableObject {
-    @Published var ableOrDisable = false
+    @Published var ableOrDisable = true
+    
     
     func changeTheViews() {
         ableOrDisable.toggle()

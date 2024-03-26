@@ -30,7 +30,7 @@ struct VacancyView: View {
                         .padding(.horizontal)
                         
                         SwiftUI.Button(action: {}) {
-                            Text(viewModel.jobVacancy.count.vacancy())
+                            Text("Еще \(viewModel.jobVacancy.count.vacancy())")
                                 .font(.system(size: 15))
                                 .frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.height * 0.05, alignment: .center)
                                 .foregroundColor(.white)
@@ -47,7 +47,6 @@ struct VacancyView: View {
                     .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                     .ignoresSafeArea()
             }
-            .environmentObject(viewModel)
     }
     }
 

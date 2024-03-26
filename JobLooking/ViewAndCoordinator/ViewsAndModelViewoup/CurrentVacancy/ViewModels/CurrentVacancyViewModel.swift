@@ -35,13 +35,6 @@ class CurrentVacancyViewModel: ObservableObject {
 
 //MARK: Frame func
     
-//    func lookingWidth(lookking: Int?, width: CGFloat) -> CGFloat {
-//        lookking == nil ? width * 0.9 : width * 0.45
-//    }
-//    func responceWidth(responce: Int?, width: CGFloat) -> CGFloat {
-//        responce == nil ? width * 0.0 : width * 0.45
-//    }
-    
     func responceFrame(looking: Int?, responce: Int?, width: CGFloat) -> CGFloat {
         var frame: CGFloat = 0
         if responce == nil && looking == nil {

@@ -13,7 +13,7 @@ class JobsListViewModel: ObservableObject {
     @Published var jobVacancy = [Vacancy]() 
     @Published var jobOffers = [Offer]()
     @Published var isFavorite = false
-    @Published var favoriteVacancy = [Vacancy]()
+    @Published var favoriteVacancy: [Vacancy] = []
     
     @Published var currentVacancy: [Vacancy] = []
     
@@ -101,37 +101,32 @@ class JobsListViewModel: ObservableObject {
         return distance
     }
     
-    func iDontHaveFavoritesVacancies(vacancy: Vacancy) {
-        if favoriteVacancy.isEmpty {
-            iLikeThisVacancy(vacancy: vacancy)
-        }
+    func emptyFavoriteVacancysArray(vacancy: Vacancy) -> Bool {
+        favoriteVacancy.isEmpty ? true : false
     }
-    
-    func isThisVacancyIsFavorite(vacancy: Vacancy) -> Bool {
+            
+    func doIHaveThisVacancy(vacancy: Vacancy) -> Bool {
         var bool = false
-        if favoriteVacancy.isEmpty {
-            bool = true
-        } else {
-            for index in 0..<favoriteVacancy.count - 1 {
-                if favoriteVacancy[index].id == vacancy.id {
-                    bool = false
-                } else {
-                    bool = true
-                }
+        for myFavorite in favoriteVacancy {
+            if vacancy.id == myFavorite.id {
+                bool = true
+            } else {
+                bool = false
             }
         }
         return bool
     }
+            
 
     
     func iLikeThisVacancy(vacancy: Vacancy) {
         favoriteVacancy.append(vacancy)
-        print("append")
+        print(vacancy.id)
     }
     
     func iDontLikeThisVacancy(vacancy: Vacancy) {
         self.favoriteVacancy = favoriteVacancy.filter { $0.id != vacancy.id }
-        print("removed")
+        print(vacancy.id)
     }
     
     func pushToCurrentVacancy(coordinator: Coordinator) {

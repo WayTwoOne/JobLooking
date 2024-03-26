@@ -9,34 +9,12 @@ import Foundation
 
 class CustomTabBarViewModel: ObservableObject {
     
-    enum Tab: String, CaseIterable {
-        case magnifier
-        case heart
-        case responses
-        case messages
-        case profile
-    }
+    let tabBarItems: [(image: String, title: String)] = [
+        ("magnifier", "Поиск"),
+        ("heart", "Избранное"),
+        ("responses", "Отклики"),
+        ("messages", "Сообщения"),
+        ("profile", "Профиль")
+    ]
     
-    @Published var tapped: Tab = .magnifier
-    
-    let allCases = Tab.allCases
-    
-    func changeTheTappedView(tab: Tab) {
-        tapped = tab
-    }
-    
-    func textUnderImage(with tab: Tab) -> String {
-        switch tab {
-        case .magnifier:
-            return "Поиск"
-        case .heart:
-            return "Избранное"
-        case .responses:
-            return "Отклики"
-        case .messages:
-            return "Сообщения"
-        case .profile:
-            return "Профиль"
-        }
-    }
 }

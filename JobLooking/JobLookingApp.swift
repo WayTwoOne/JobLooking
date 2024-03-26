@@ -23,6 +23,7 @@ struct JobLookingApp: App {
                 .environmentObject(currentViewModel)
                 .environmentObject(customTabViewModel)
                 .environmentObject(contentViewModel)
+                .environment(\.colorScheme, .dark)
         }
     }
 }
