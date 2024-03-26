@@ -29,15 +29,13 @@ struct ContentView: View {
                                 coordinator.get(fullScreenCover: item)
                             }
                     }
-                    .tabItem {
-                        Image(systemName: "square.and.arrow.up")
-                        
+                    .overlay(alignment: .bottom) {
+                        CustomTabBarView(tabSelcted: $tab)
                     }
-                    .badge(4)
+                    
+                    .environmentObject(coordinator)
+                    .background(Color.black.ignoresSafeArea())
                 }
-        
-                .environmentObject(coordinator)
-                .background(Color.black.ignoresSafeArea())
             } else {
                 VStack {
                     TabView(selection: $tab) {
